@@ -30,19 +30,6 @@
 
 4. 🤸 [Quick Start](#quick-start)
 
-5. 🕸️ [Snippets (Code to Copy)](#snippets)
-
-6. 🔗 [Assets](#links)
-
-7. 🚀 [More](#more)
-
-## 🚨 Tutorial
-
-This repository contains the code corresponding to an in-depth tutorial available on our YouTube channel, <a href="https://www.youtube.com/@javascriptmastery/videos" target="_blank"><b>JavaScript Mastery</b></a>.
-
-If you prefer visual learning, this is the perfect resource for you. Follow our tutorial to learn how to build projects like these step-by-step in a beginner-friendly manner!
-
-<a href="https://www.youtube.com/watch?v=f8Z9JyB2EIE" target="_blank"><img src="https://github.com/sujatagunale/EasyRead/assets/151519281/1736fca5-a031-4854-8c09-bc110e3bc16d" /></a>
 
 ## <a name="introduction">🤖 Introduction</a>
 
@@ -50,7 +37,6 @@ Built with Expo, TypeScript, and Tailwind CSS, this app fetches movies and creat
 
 If you're getting started and need assistance or face any bugs, join our active Discord community with over **50k+** members. It's a place where people help each other out.
 
-<a href="https://discord.com/invite/n6EdbFJ" target="_blank"><img src="https://github.com/sujatagunale/EasyRead/assets/151519281/618f4872-1e10-42da-8213-1d69e486d02e" /></a>
 
 ## <a name="tech-stack">⚙️ Tech Stack</a>
 
@@ -98,9 +84,8 @@ Make sure you have the following installed on your machine:
 
 ```bash
 
-git clone https://github.com/adrianhajdin/rn-movie-app.git
-
-cd rn-movie-app
+git clone https://github.com/kingredboy/ageflix.git
+cd ageflix
 
 ```
 
@@ -129,7 +114,6 @@ EXPO_PUBLIC_APPWRITE_DATABASE_ID=
 EXPO_PUBLIC_APPWRITE_COLLECTION_ID=
 
 
-
 ```
 
 Replace the placeholder values with your actual TMDB API key, Appwrite project ID, Database ID, and Collection ID. You can obtain these credentials by signing up on the [Appwrite](https://cloud.appwrite.io/console/login), [TMDB](https://www.themoviedb.org/login).
@@ -144,149 +128,3 @@ npx expo start
 
 Open your ExpoGO app on your phone and scan the QR code to view the project.
 
-## <a name="snippets">🕸️ Snippets</a>
-
-<details>
-
-<summary><code>tailwind.config.js</code></summary>
-
-```typescript
-/** @type {import('tailwindcss').Config} */
-module.exports = {
-  content: ["./app/**/*.{js,jsx,ts,tsx}", "./components/**/*.{js,jsx,ts,tsx}"],
-  presets: [require("nativewind/preset")],
-  theme: {
-    extend: {
-      colors: {
-        primary: "#030014",
-        secondary: "#151312",
-        ratingBox: "#221F3D",
-        searchBar: "#0F0D23",
-        text: "#9CA4AB",
-        darkAccent: "#AB8BFF",
-        accentText: "#A8B5DB",
-        secondaryText: "#D6C7FF",
-      },
-    },
-  },
-  plugins: [],
-};
-```
-
-</details>
-
-<details>
-
-<summary><code>app/globals.css</code></summary>
-
-```css
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-```
-
-</details>
-
-<details>
-
-<summary><code>interfaces/interfaces.d.ts</code></summary>
-
-```typescript
-interface Movie {
-  id: number;
-  title: string;
-  adult: boolean;
-  backdrop_path: string;
-  genre_ids: number[];
-  original_language: string;
-  original_title: string;
-  overview: string;
-  popularity: number;
-  poster_path: string;
-  release_date: string;
-  video: boolean;
-  vote_average: number;
-  vote_count: number;
-}
-
-interface TrendingMovie {
-  searchTerm: string;
-  movie_id: number;
-  title: string;
-  count: number;
-  poster_url: string;
-}
-
-interface MovieDetails {
-  adult: boolean;
-  backdrop_path: string | null;
-  belongs_to_collection: {
-    id: number;
-    name: string;
-    poster_path: string;
-    backdrop_path: string;
-  } | null;
-  budget: number;
-  genres: {
-    id: number;
-    name: string;
-  }[];
-  homepage: string | null;
-  id: number;
-  imdb_id: string | null;
-  original_language: string;
-  original_title: string;
-  overview: string | null;
-  popularity: number;
-  poster_path: string | null;
-  production_companies: {
-    id: number;
-    logo_path: string | null;
-    name: string;
-    origin_country: string;
-  }[];
-  production_countries: {
-    iso_3166_1: string;
-    name: string;
-  }[];
-  release_date: string;
-  revenue: number;
-  runtime: number | null;
-  spoken_languages: {
-    english_name: string;
-    iso_639_1: string;
-    name: string;
-  }[];
-  status: string;
-  tagline: string | null;
-  title: string;
-  video: boolean;
-  vote_average: number;
-  vote_count: number;
-}
-
-interface TrendingCardProps {
-  movie: TrendingMovie;
-  index: number;
-}
-```
-
-</details>
-
-## <a name="links">🔗 Assets</a>
-
-- Assets used in the project can be found [here](https://drive.google.com/file/d/1_8eNj07rNS7B-JyCZ-lj1GtRYG03Ye-M/view)
-
-## <a name="more">🚀 More</a>
-
-**Advance your skills with Next.js Pro Course**
-
-Enjoyed creating this project? Dive deeper into our PRO courses for a richer learning adventure. They're packed with
-
-detailed explanations, cool features, and exercises to boost your skills. Give it a go!
-
-<a href="https://jsmastery.pro/next15" target="_blank">
-
-   <img src="https://github.com/user-attachments/assets/b8760e69-1f81-4a71-9108-ceeb1de36741" alt="Project Banner">
-
-</a>
